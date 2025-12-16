@@ -1,0 +1,6 @@
+@Mini.CleanArc.WebApi_HostAddress = http://localhost:5202
+
+GET {{Mini.CleanArc.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

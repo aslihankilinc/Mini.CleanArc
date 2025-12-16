@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Name": "Ahmet Yılmaz",
+    "Email": "ahmet.yilmaz@example.com",
+    "Role": "Admin"
+  },
+  {
+    "Id": 2,
+    "Name": "Ayşe Demir",
+    "Email": "ayse.demir@example.com",
+    "Role": "User"
+  },
+  {
+    "Id": 3,
+    "Name": "Mehmet Kaya",
+    "Email": "mehmet.kaya@example.com",
+    "Role": "User"
+  },
+  {
+    "Id": 4,
+    "Name": "Elif Şahin",
+    "Email": "elif.sahin@example.com",
+    "Role": "User"
+  },
+  {
+    "Id": 5,
+    "Name": "Can Öz",
+    "Email": "can.oz@example.com",
+    "Role": "Manager"
+  }
+]
