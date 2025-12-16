@@ -2,45 +2,35 @@ Mini.CleanArc:
   src:
     Core:
       Domain:
-        - Entities: "User.cs, TaskItem.cs (domain modelleri)"
-        - ValueObjects: "Gerekirse eklenir (örnek: Email, Priority)"
-        - Events: "Domain event yapýlarý"
+        - Entities: "User.cs, TaskItem.cs (domain modelleri)
       Application:
-        - Interfaces: "Repository, Service kontratlarý (IUserRepository, ITaskService)"
+        - Interfaces: "Repository, Service  (IUserRepository, ITaskService)"
         - DTOs:
             - UserDtos: "CreateUserDto, UpdateUserDto, UserResponseDto"
             - TaskDtos: "CreateTaskDto, UpdateTaskDto, TaskResponseDto"
-        - UseCases: "Business logic (CreateUserHandler, GetAllTasksHandler, vb.)"
-        - Validators: "FluentValidation sýnýflarý"
+        - Validators: "FluentValidation sÄ±nÄ±fÄ±"
     Infrastructure:
       Persistence:
-        - AppDbContext.cs: "EF Core DbContext tanýmý"
-        - Configurations: "EntityTypeConfiguration sýnýflarý (UserConfiguration, TaskConfiguration)"
+        - AppDbContext.cs: "EF Core DbContext tanÄ±mÄ±"
         - SeedData:
             - users.json
             - tasks.json
       Extensions:
-        - MigrationExtensions.cs: "Migration ve Seed iþlemlerini yöneten extension"
+        - MigrationExtensions.cs: "Migration ve Seed iÅŸlemlerini yÃ¶neten extension"
       Repository:
         - EfUserRepository.cs
         - EfTaskRepository.cs
+       Mapper:
+        - MapperConfig.cs: "AutoMapper profil ayarlarÄ±"
     WebApi:
       Controllers:
         - UsersController.cs
         - TasksController.cs
-      Middleware:
-        - ExceptionMiddleware.cs (isteðe baðlý)
-      Program.cs: "Uygulama baþlangýç noktasý, DI ve migration çaðrýlarý"
-      Mapper:
-        - MapperConfig.cs: "AutoMapper profil ayarlarý"
+      Program.cs: "Uygulama baÅŸlangÄ±Ã§ noktasÄ±, DI ve migration Ã§aÄŸrÄ±larÄ±"
+    
   tests:
     UnitTests:
       - UserServiceTests.cs
       - TaskServiceTests.cs
     IntegrationTests:
       - ApiIntegrationTests.cs
-  .github:
-    workflows:
-      - dotnet.yml: "CI/CD pipeline yapýlandýrmasý"
-  README.md: "Proje açýklamasý, kullaným talimatlarý"
-  Mini.CleanArc.sln: "Çözüm dosyasý"
