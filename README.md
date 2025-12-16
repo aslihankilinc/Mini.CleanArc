@@ -39,6 +39,7 @@ src/
 ```│ └── ```MapperConfig.cs → AutoMapper yapılandırması
 
 ```└── WebAPI/ → API katmanı```
+
 ```├── ```Controllers/ → UsersController, TasksController
 
 ```├──``` Middleware/ → Hata yönetimi (ErrorHandlingMiddleware)
