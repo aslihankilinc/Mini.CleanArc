@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{61B88614-5612-40DA-A6C4-A3A4A34C3186}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{18C4712A-DE8A-459A-99CC-883120E2DFB9}"
+	ProjectSection(SolutionItems) = preProject
+		project-structure.yaml = project-structure.yaml
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mini.CleanArc.Core", "Mini.CleanArc.Core\Mini.CleanArc.Core.csproj", "{8A2603DC-1282-42BF-97A4-76D9E8C12E8C}"
 EndProject

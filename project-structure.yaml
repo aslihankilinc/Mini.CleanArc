@@ -1,0 +1,46 @@
+Mini.CleanArc:
+  src:
+    Core:
+      Domain:
+        - Entities: "User.cs, TaskItem.cs (domain modelleri)"
+        - ValueObjects: "Gerekirse eklenir (örnek: Email, Priority)"
+        - Events: "Domain event yapýlarý"
+      Application:
+        - Interfaces: "Repository, Service kontratlarý (IUserRepository, ITaskService)"
+        - DTOs:
+            - UserDtos: "CreateUserDto, UpdateUserDto, UserResponseDto"
+            - TaskDtos: "CreateTaskDto, UpdateTaskDto, TaskResponseDto"
+        - UseCases: "Business logic (CreateUserHandler, GetAllTasksHandler, vb.)"
+        - Validators: "FluentValidation sýnýflarý"
+    Infrastructure:
+      Persistence:
+        - AppDbContext.cs: "EF Core DbContext tanýmý"
+        - Configurations: "EntityTypeConfiguration sýnýflarý (UserConfiguration, TaskConfiguration)"
+        - SeedData:
+            - users.json
+            - tasks.json
+      Extensions:
+        - MigrationExtensions.cs: "Migration ve Seed iþlemlerini yöneten extension"
+      Repository:
+        - EfUserRepository.cs
+        - EfTaskRepository.cs
+    WebApi:
+      Controllers:
+        - UsersController.cs
+        - TasksController.cs
+      Middleware:
+        - ExceptionMiddleware.cs (isteðe baðlý)
+      Program.cs: "Uygulama baþlangýç noktasý, DI ve migration çaðrýlarý"
+      Mapper:
+        - MapperConfig.cs: "AutoMapper profil ayarlarý"
+  tests:
+    UnitTests:
+      - UserServiceTests.cs
+      - TaskServiceTests.cs
+    IntegrationTests:
+      - ApiIntegrationTests.cs
+  .github:
+    workflows:
+      - dotnet.yml: "CI/CD pipeline yapýlandýrmasý"
+  README.md: "Proje açýklamasý, kullaným talimatlarý"
+  Mini.CleanArc.sln: "Çözüm dosyasý"
